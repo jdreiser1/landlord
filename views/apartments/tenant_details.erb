@@ -1,0 +1,13 @@
+<a href="/">Home</a><br/><br/>
+Address: <%= @apt.address %> <br/><br/>
+<% @apt.tenants.each do |tenant| %>
+  <%= tenant.name %> <br/>
+<% end %>
+<h2>Add a Tenant</h2>
+<form action="/tenants" method="post">
+  <label>Name<input type="text" name="tenant[name]"></label>
+  <label>Age<input type="text" name="tenant[age]"></label>
+  <label>Gender<input type="text" name="tenant[gender]"></label>
+  <input type="hidden" name="tenant[apartment_id]" value="<%= @apt.id %>">
+  <input type="submit" value="Add a Tenant">
+</form>

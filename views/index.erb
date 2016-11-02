@@ -1,0 +1,19 @@
+<ul>
+  <h2>General Apartment Info</h2>
+  <li><a href="/apartments">All Apartments</a></li>
+  <li><a href="/apartments/new">New Apartment</a></li>
+
+  <h2>Apartment Lookup</h2>
+  <form action="/apartments/apartmentdetails" method="get">
+  <label>Apartment ID: <input type="text" name="apartment[id]"></label><br/>
+  <label>OR Apartment Address: <input type="text" name="apartment[address]"></label> <br/>
+  <input type="submit" value="Apartment Details">
+  </form>
+
+  <h2>Tenant Lookup</h2>
+  <form action="/apartments/tenantdetails" method="get">
+  <label>Apartment ID: <input type="text" name="apartment[id]"></label><br/>
+  <label>OR Apartment Address: <input type="text" name="apartment[address]"></label> <br/>
+  <input type="submit" value="List of Tenants">
+  </form>
+</ul>

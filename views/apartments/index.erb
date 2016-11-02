@@ -1,0 +1,9 @@
+<h2>Apartments</h2>
+<!-- <div class="pokemon"> -->
+<% @apartments.each do |apartment|%>
+  ID: <%= apartment.id %>           <%= apartment.address %>
+  <form action="/apartments/<%= apartment.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete!"><br/><br/>
+<% end %>
+<!-- </div> -->

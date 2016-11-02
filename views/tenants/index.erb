@@ -1,0 +1,15 @@
+<h2>Tenants</h2>
+<!-- <div class="pokemon"> -->
+<% @tenants.each do |tenant|%>
+  <a href="/tenants/<%= tenant.id %>"><%= tenant.name %></a>
+<% end %>
+<h2>Add a Tenant</h2>
+<form action="/tenants" method="post">
+  <label>Name<input type="text" name="tenant[name]"></label>
+  <label>Age<input type="text" name="tenant[age]"></label>
+  <label>Gender<input type="text" name="tenant[gender]"></label>
+  <input type="hidden" name="tenant[apartment]">
+  <input type="submit" value="Add a Tenant">
+</form>
+
+<!-- </div> -->
